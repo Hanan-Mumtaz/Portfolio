@@ -17,9 +17,9 @@ export default function Header() {
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-purple-800 bg-clip-text text-transparent"
+          className="text-xl font-bold bg-gradient-to-r from-purple-500 to-purple-800 bg-clip-text text-transparent"
         >
-          
+          TheWorkGrid
         </motion.div>
         
         <nav className="hidden md:flex gap-8">
