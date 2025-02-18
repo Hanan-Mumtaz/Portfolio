@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Database, BarChart as ChartBar, Atom, Award, GraduationCap } from 'lucide-react';
-import profileImage from '../../dist/assets/profile.jpg'; // Adjust path accordingly
+import profileImage from '../../dist/assets/profile-D6iLI1Rc.jpg'; // Adjust path accordingly
 
 export default function About() {
   return (

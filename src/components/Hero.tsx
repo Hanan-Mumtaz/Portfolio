@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Code, Sparkles, Zap } from 'lucide-react';
-import profileImage from '../../dist/assets/profile.jpg'; // Adjust path accordingly
+import profileImage from '../../dist/assets/profile-D6iLI1Rc.jpg'; // Adjust path accordingly
 
 <motion.div className="relative rounded-2xl overflow-hidden shadow-2xl">
   <img
