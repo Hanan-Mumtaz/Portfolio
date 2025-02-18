@@ -29,15 +29,6 @@ const projects = [
     github: 'https://github.com/Hanan-Mumtaz/Gym_Manangement_System',
     demo: 'https://demo.com',
     featured: false
-  },
-  {
-    title: 'E-Commerce Website',
-    description: 'A scalable e-commerce platform built with Next.js and MongoDB.',
-    image: '/Portfolio/assets/LL.png',
-    tags: ['Next.js', 'MongoDB', 'TailwindCSS'],
-    github: 'https://github.com/Hanan-Mumtaz/Ecommerce',
-    demo: 'https://demo.com',
-    featured: false
   }
 ];
 
