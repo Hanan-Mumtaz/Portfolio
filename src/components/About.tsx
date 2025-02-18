@@ -37,7 +37,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="absolute -bottom-6 -right-6 bg-purple-900 p-4 rounded-xl shadow-lg"
+              className="absolute -bottom-6 -right-0 md:-right-6 bg-purple-900 p-4 rounded-xl shadow-lg"
             >
               <p className="font-bold text-white">Full Stack Developer</p>
             </motion.div>

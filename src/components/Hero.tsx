@@ -36,7 +36,7 @@ export default function Hero() {
       ))}
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 md:px-14 py-12 md:py-20">
+      <div className="container mx-auto mt-2 md:mt-4 px-4 md:px-14 py-12 md:py-20">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           {/* Left Side: Text Content */}
           <motion.div
@@ -118,7 +118,7 @@ export default function Hero() {
 
           {/* Right Side: Profile Image */}
           <motion.div
-            className="flex-1 relative mt-8 md:mt-0"
+            className="flex-1 relative mt-7 md:mt-0"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -170,7 +170,7 @@ export default function Hero() {
 
       {/* Animated Arrow Down */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-100 md:bottom-10 left-1/2 md:left-1/2 transform -translate-x-1/2"
         animate={{ 
           y: [0, 10, 0],
           opacity: [0.5, 1, 0.5]
