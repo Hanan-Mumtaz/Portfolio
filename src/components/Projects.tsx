@@ -6,11 +6,7 @@ const projects = [
   {
     title: 'Healthcove',
     description: 'A website built with React.js, ASP.net and MongoDB.',
-<<<<<<< HEAD
     image: '/assets/Healthcove.png',
-=======
-    image: 'Portfolio/dist/assets/Healthcove.png',
->>>>>>> 7d97b18fe1ce54ed5a5ad1618ba825c8109baab3
     tags: ['React.js', 'ASP.net', 'MongoDB'],
     github: 'https://github.com/Hanan-Mumtaz/Healthcove',
     demo: 'https://demo.com',
@@ -19,11 +15,7 @@ const projects = [
   {
     title: 'Teeze Store',
     description: 'An application built with React-native, ASP.net and MongoDB',
-<<<<<<< HEAD
     image: '/assets/teeze.png',
-=======
-    image: '/Portfolio/dist/assets/teeze.png',
->>>>>>> 7d97b18fe1ce54ed5a5ad1618ba825c8109baab3
     tags: ['React-native', 'ASP.net', 'MongoDB'],
     github: 'https://github.com/Hanan-Mumtaz/teeze',
     demo: 'https://demo.com',
@@ -32,11 +24,7 @@ const projects = [
   {
     title: 'Gym Management System',
     description: 'A website built with HTML, CSS, JavaScript, PHP and MySQL.',
-<<<<<<< HEAD
     image: '/assets/Gym.png',
-=======
-    image: '/Portfolio/dist/assets/Gym.png',
->>>>>>> 7d97b18fe1ce54ed5a5ad1618ba825c8109baab3
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
     github: 'https://github.com/Hanan-Mumtaz/Gym_Manangement_System',
     demo: 'https://demo.com',
@@ -45,11 +33,7 @@ const projects = [
   {
     title: 'E-Commerce Website',
     description: 'A scalable e-commerce platform built with Next.js and MongoDB.',
-<<<<<<< HEAD
     image: '/assets/LL.png',
-=======
-    image: '/Portfolio/dist/assets/LL.png',
->>>>>>> 7d97b18fe1ce54ed5a5ad1618ba825c8109baab3
     tags: ['Next.js', 'MongoDB', 'TailwindCSS'],
     github: 'https://github.com/Hanan-Mumtaz/Ecommerce',
     demo: 'https://demo.com',
