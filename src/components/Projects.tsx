@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Star, ArrowLeft, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github, ArrowLeft, ArrowRight } from 'lucide-react';
 
 const projects = [
   {

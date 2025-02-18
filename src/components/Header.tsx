@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import he from '/assets/bg.png';
+import he from '/assets/bg5.png'; // Adjust path accordingly
 
 export default function Header() {
   const menuItems = ['About', 'Projects', 'Skills', 'Contact'];
@@ -11,7 +11,7 @@ export default function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-black text-white shadow-lg overflow-hidden" // Ensure overflow-hidden is applied
+      className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm text-white shadow-lg overflow-hidden" // Added backdrop blur for modern look
     >
       {/* Smog Effect */}
       <motion.div
@@ -27,23 +27,25 @@ export default function Header() {
         style={{ zIndex: 0 }} // Ensure smog is behind the content
       />
 
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center relative z-10">
+      <div className="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center relative z-10">
+        {/* Logo and Brand */}
         <motion.div
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="flex items-center gap-0"
+          className="flex items-center"
         >
           {/* Logo */}
-          <img src={he} alt="Logo" className="h-8 w-8" />
+          <img src={he} alt="Logo" className="h-8 w-8 -mr-1" />
 
-          {/* Text */}
+          {/* Brand Text */}
           <span className="text-xl font-bold bg-gradient-to-r from-purple-500 to-purple-800 bg-clip-text text-transparent">
-           ectoris
+            ectoris
           </span>
         </motion.div>
 
-        <nav className="hidden md:flex gap-8">
+        {/* Navigation Menu */}
+        <nav className="hidden md:flex gap-6 lg:gap-8">
           {menuItems.map((item, index) => (
             <motion.a
               key={item}
@@ -51,7 +53,7 @@ export default function Header() {
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 + index * 0.1 }}
-              className="text-gray-300 hover:text-purple-400 transition-colors font-medium"
+              className="text-gray-300 hover:text-purple-400 transition-colors font-medium text-sm lg:text-base"
               whileHover={{ y: -2 }}
             >
               {item}
@@ -59,6 +61,7 @@ export default function Header() {
           ))}
         </nav>
 
+        {/* Social Icons */}
         <motion.div 
           className="flex gap-4"
           initial={{ x: 20, opacity: 0 }}
@@ -73,7 +76,7 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Github size={20} />
+            <Github className="w-5 h-5 md:w-6 md:h-6" /> {/* Responsive icon size */}
           </motion.a>
           <motion.a 
             href="https://linkedin.com/in/hanan-mumtaz" 
@@ -83,7 +86,7 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Linkedin size={20} />
+            <Linkedin className="w-5 h-5 md:w-6 md:h-6" /> {/* Responsive icon size */}
           </motion.a>
           <motion.a 
             href="mailto:hananmumtaz55@gmail.com" 
@@ -91,7 +94,7 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Mail size={20} />
+            <Mail className="w-5 h-5 md:w-6 md:h-6" /> {/* Responsive icon size */}
           </motion.a>
         </motion.div>
       </div>
