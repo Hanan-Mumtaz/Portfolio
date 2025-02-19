@@ -36,7 +36,7 @@ export default function Hero() {
       ))}
 
       {/* Main Content */}
-      <div className="container mx-auto mt-2 md:mt-4 px-4 md:px-14 py-12 md:py-20">
+      <div className="container mx-auto mt-8 md:mt-4 px-4 md:px-14 py-48 md:py-20">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           {/* Left Side: Text Content */}
           <motion.div
@@ -91,15 +91,14 @@ export default function Hero() {
             </motion.p>
 
             {/* Buttons */}
-            <motion.div
-              className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center md:justify-start"
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-start w-full sm:w-auto"
+            initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
               <motion.a 
                 href="#projects" 
-                className="group relative bg-purple-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-full overflow-hidden z-10 pointer-events-auto text-sm md:text-base"
+                className="bg-purple-600 text-white px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:scale-105"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -107,7 +106,7 @@ export default function Hero() {
               </motion.a>
               <motion.a  
                 href="#contact" 
-                className="group relative border-2 border-purple-600 text-purple-400 px-6 py-3 md:px-8 md:py-4 rounded-full overflow-hidden z-10 pointer-events-auto text-sm md:text-base"
+                className="border-2 border-purple-600 text-purple-400 px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:scale-105"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -116,9 +115,9 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right Side: Profile Image */}
+          {/* Right Side: Profile Image (Hidden on small screens) */}
           <motion.div
-            className="flex-1 relative mt-7 md:mt-0"
+            className="hidden md:block flex-1 relative mt-7 md:mt-0" // Hidden on small screens
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -228,14 +227,14 @@ export default function Hero() {
           />
         </svg>
         <defs>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur" />
-      <feMerge>
-        <feMergeNode in="coloredBlur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-  </defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
       </div>
     </section>
   );
