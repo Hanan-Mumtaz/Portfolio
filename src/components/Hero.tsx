@@ -36,7 +36,7 @@ export default function Hero() {
       ))}
 
       {/* Main Content */}
-      <div className="container mx-auto mt-8 md:mt-4 px-4 md:px-14 py-48 md:py-20">
+      <div className="container mx-auto mt-8 md:mt-4 px-4 md:px-14 py-40 md:py-20">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           {/* Left Side: Text Content */}
           <motion.div
