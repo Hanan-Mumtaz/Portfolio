@@ -1,169 +1,232 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Github, ArrowLeft, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowLeft, ArrowRight, Github, ExternalLink } from 'lucide-react';
 
 const projects = [
-  {
-    title: 'Healthcove',
-    description: 'A website built with React.js, ASP.net and MongoDB.',
-    image: '/Portfolio/assets/Healthcove.png',
-    tags: ['React.js', 'ASP.net', 'MongoDB'],
-    github: 'https://github.com/Hanan-Mumtaz/Healthcove',
-    demo: 'https://demo.com',
-    featured: false
-  },
-  {
-    title: 'Teeze Store',
-    description: 'An application built with React-native, ASP.net and MongoDB',
-    image: '/Portfolio/assets/teeze.png',
-    tags: ['React-native', 'ASP.net', 'MongoDB'],
-    github: 'https://github.com/Hanan-Mumtaz/teeze',
-    demo: 'https://demo.com',
-    featured: true
-  },
-  {
-    title: 'Gym Management System',
-    description: 'A website built with HTML, CSS, JavaScript, PHP and MySQL.',
-    image: '/Portfolio/assets/Gym.png',
-    tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-    github: 'https://github.com/Hanan-Mumtaz/Gym_Manangement_System',
-    demo: 'https://demo.com',
-    featured: false
-  }
-];
+    {
+      title: "Healthcove",
+      description: "A website built with React.js, ASP.net and MongoDB.",
+      image: "/Portfolio/assets/Healthcove.png",
+      tags: ["React.js", "ASP.net", "MongoDB"],
+      github: "https://github.com/Hanan-Mumtaz/Healthcove",
+      demo: "https://demo.com",
+      featured: false,
+    },
+    {
+      title: "Teeze Store",
+      description: "An application built with React-native, ASP.net and MongoDB",
+      image: "/Portfolio/assets/teeze.png",
+      tags: ["React-native", "ASP.net", "MongoDB"],
+      github: "https://github.com/Hanan-Mumtaz/teeze",
+      demo: "https://demo.com",
+      featured: true,
+    },
+    {
+      title: "Gym Management System",
+      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+      image: "/Portfolio/assets/Gym.png",
+      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+      demo: "https://demo.com",
+      featured: false,
+    },
+    {
+      title: "Gym Management System",
+      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+      image: "/Portfolio/assets/Gym.png",
+      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+      demo: "https://demo.com",
+      featured: false,
+    },
+    {
+      title: "Gym Management System",
+      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+      image: "/Portfolio/assets/Gym.png",
+      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+      demo: "https://demo.com",
+      featured: false,
+    }
+    ,
+    {
+      title: "Gym Management System",
+      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+      image: "/Portfolio/assets/Gym.png",
+      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+      demo: "https://demo.com",
+      featured: false,
+    },
+    {
+      title: "Gym Management System",
+      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+      image: "/Portfolio/assets/Gym.png",
+      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+      demo: "https://demo.com",
+      featured: false,
+    },
+    {
+      title: "Gym Management System",
+      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+      image: "/Portfolio/assets/Gym.png",
+      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+      demo: "https://demo.com",
+      featured: false,
+    }
+  ];
+
 
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleProjects = 3;
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const nextProject = () => {
-    if (currentIndex + visibleProjects < projects.length) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  const prevProject = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
-  // Prevent horizontal scrolling
   useEffect(() => {
-    document.documentElement.style.overflowX = "hidden";
-    document.documentElement.style.width = "100%";
+    const updateItemsPerPage = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerPage(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerPage(2);
+      } else {
+        setItemsPerPage(3);
+      }
+    };
+
+    updateItemsPerPage();
+    window.addEventListener('resize', updateItemsPerPage);
+    return () => window.removeEventListener('resize', updateItemsPerPage);
   }, []);
 
+  const nextSlide = () => {
+    if (currentIndex + itemsPerPage < projects.length) {
+      setCurrentIndex(prev => prev + 1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(prev => prev - 1);
+    }
+  };
+
   return (
-    <section id="projects" className="py-20 bg-black text-white">
-      <div className="container mx-auto px-4 relative  overflow-hidden">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-16 text-purple-400"
+    <div className="min-h-screen bg-black text-white py-20">
+      <div className="container mx-auto px-4">
+        <motion.h1 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl font-bold text-center mb-14 text-purple-400"
         >
           Featured Projects
-        </motion.h2>
-        <div className="relative mx-auto w-[90%] overflow-visible">
-          {/* Left Navigation Button */}
-          {currentIndex > 0 && (
-            <button
-              onClick={prevProject}
-              className="absolute left-[-40px] md:left-[-55px] top-1/2 transform -translate-y-1/2 bg-purple-700 text-white p-3 rounded-full shadow-md hover:bg-purple-500 transition z-10"
-            >
-              <ArrowLeft size={25} />
-            </button>
-          )}
+        </motion.h1>
 
-          {/* Right Navigation Button */}
-          {currentIndex < projects.length - visibleProjects && (
-            <button
-              onClick={nextProject}
-              className="absolute right-[-40px] md:right-[-55px] top-1/2 transform -translate-y-1/2 bg-purple-700 text-white p-3 rounded-full shadow-md hover:bg-purple-500 transition z-10"
-            >
-              <ArrowRight size={25} />
-            </button>
-          )}
-
-          {/* Smooth Sliding Container */}
-          <div className="relative w-full flex items-center justify-center overflow-hidden">
-            <motion.div
-              className="flex gap-8 md:gap-10"
-              animate={{ x: -currentIndex * 444 }}
-              transition={{ type: "tween", duration: 0.5, ease: "easeInOut" }}
-              style={{ width: `${projects.length * 444}px` }}
-            >
-              {projects.map((project, index) => (
-                <motion.div
-                  key={project.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.03 }}
-                  className="group relative bg-gray-900 rounded-xl shadow-xl overflow-hidden w-[280px] sm:w-[350px] md:w-[413px] h-[400px] md:h-[450px] flex-shrink-0"
-                  whileHover={{ y: -5 }}
-                >
-                  {/* Project Image */}
-                  <div className="relative overflow-hidden aspect-video">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <motion.div 
-                      className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      initial={false}
-                    >
-                      <div className="absolute inset-0 flex items-center justify-center gap-6">
-                        <motion.a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-white hover:text-purple-400 transform"
-                          whileHover={{ scale: 1.2 }}
-                          whileTap={{ scale: 0.9 }}
-                        >
-                          <Github size={28} />
-                        </motion.a>
-                        <motion.a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-white hover:text-purple-400 transform"
-                          whileHover={{ scale: 1.2 }}
-                          whileTap={{ scale: 0.9 }}
-                        >
-                          <ExternalLink size={28} />
-                        </motion.a>
-                      </div>
-                    </motion.div>
-                  </div>
-
-                  {/* Project Details */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map(tag => (
-                        <motion.span
-                          key={tag}
-                          className="px-3 py-1 bg-purple-700 text-white rounded-full text-sm shadow-md"
-                          whileHover={{ scale: 1.05 }}
-                        >
-                          {tag}
-                        </motion.span>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+        
+        <div className="relative mx-auto max-w-7xl">
+  <div className="overflow-hidden px-4">
+    <motion.div 
+      ref={containerRef}
+      className="flex gap-6"
+      animate={{ x: -currentIndex * (101.99 / itemsPerPage) + '%' }}
+      transition={{ type: "spring", stiffness: 150, damping: 20 }}
+    >
+      {projects.map((project, index) => (
+        <motion.div
+          key={index}
+          className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: index * 0.1 }}
+        >
+          <div className="bg-gray-900 rounded-xl overflow-hidden h-full border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300 group">
+            <div className="relative overflow-hidden aspect-video">
+              <img 
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              {project.featured && (
+                <div className="absolute top-4 right-4 bg-purple-600 px-3 py-1 rounded-full text-sm font-medium">
+                  Featured
+                </div>
+              )}
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="flex gap-4">
+                  <a 
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-white/10 rounded-full hover:bg-purple-500 transition"
+                  >
+                    <Github size={24} className="text-white" />
+                  </a>
+                  <a 
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-white/10 rounded-full hover:bg-purple-500 transition"
+                  >
+                    <ExternalLink size={24} className="text-white" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors">
+                {project.title}
+              </h3>
+              <p className="text-gray-400 mb-4 text-sm">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.tags.map(tag => (
+                  <span 
+                    key={tag}
+                    className="px-3 py-1 bg-purple-900/50 rounded-full text-purple-300 text-xs font-medium"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+
+  {/* Navigation Buttons */}
+  <div className="absolute -left-4 top-1/2 -translate-y-1/2 flex items-center justify-between w-[calc(100%+2rem)]">
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      onClick={prevSlide}
+      className={`p-3 rounded-full bg-purple-600 text-white shadow-lg shadow-purple-500/20 transition-opacity ${
+        currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-purple-500'
+      }`}
+      disabled={currentIndex === 0}
+    >
+      <ArrowLeft size={24} />
+    </motion.button>
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      onClick={nextSlide}
+      className={`p-3 rounded-full bg-purple-600 text-white shadow-lg shadow-purple-500/20 transition-opacity ${
+        currentIndex + itemsPerPage >= projects.length ? 'opacity-50 cursor-not-allowed' : 'hover:bg-purple-500'
+      }`}
+      disabled={currentIndex + itemsPerPage >= projects.length}
+    >
+      <ArrowRight size={24} />
+    </motion.button>
+  </div>
+</div>
+
+
       </div>
-    </section>
+    </div>
   );
 }

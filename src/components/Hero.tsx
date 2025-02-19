@@ -36,7 +36,7 @@ export default function Hero() {
       ))}
 
       {/* Main Content */}
-      <div className="container mx-auto mt-8 md:mt-4 px-4 md:px-14 py-40 md:py-20">
+      <div className="container mx-auto mt-6 md:mt-4 px-4 md:px-14 py-12 md:py-20">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           {/* Left Side: Text Content */}
           <motion.div
@@ -98,15 +98,16 @@ export default function Hero() {
             >
               <motion.a 
                 href="#projects" 
-                className="bg-purple-600 text-white px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:scale-105"
-                whileHover={{ scale: 1.05 }}
+                className="w-full sm:w-auto text-center bg-purple-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base group relative bg-purple-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-full overflow-hidden z-10 pointer-events-auto text-sm md:text-base"
+
+                                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="relative">View My Work</span>
               </motion.a>
               <motion.a  
                 href="#contact" 
-                className="border-2 border-purple-600 text-purple-400 px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:scale-105"
+                className="group relative border-2 border-purple-600 text-purple-400 px-6 py-3 md:px-8 md:py-4 rounded-full overflow-hidden z-10 pointer-events-auto text-sm md:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
