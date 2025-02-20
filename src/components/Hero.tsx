@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Code, Sparkles, Zap } from 'lucide-react';
 import profileImage from '/assets/profile-D6iLI1Rc.jpg'; // Adjust path accordingly
 
 export default function Hero() {
-  const floatingIcons = [
-    { Icon: Code, x: '10%', y: '20%', delay: 0 },
-    { Icon: Sparkles, x: '85%', y: '15%', delay: 0.2 },
-    { Icon: Zap, x: '75%', y: '75%', delay: 0.4 }
-  ];
+  const floatingIcons = useMemo(
+    () => [
+      { Icon: Code, x: '10%', y: '20%', delay: 0 },
+      { Icon: Sparkles, x: '85%', y: '15%', delay: 0.2 },
+      { Icon: Zap, x: '75%', y: '75%', delay: 0.4 },
+    ],
+    []
+  );
 
   return (
     <section className="py-0 bg-black text-white">
@@ -19,16 +22,12 @@ export default function Hero() {
           className="absolute text-purple-500/30"
           style={{ left: x, top: y }}
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ 
-            opacity: 1, 
-            scale: [1, 1.2, 1],
-            y: ["0%", "-20%", "0%"]
-          }}
+          animate={{ opacity: 1, scale: [1, 1.2, 1], y: ['0%', '-20%', '0%'] }}
           transition={{
             delay,
             duration: 3,
             repeat: Infinity,
-            repeatType: "reverse"
+            repeatType: 'reverse',
           }}
         >
           <Icon className="w-8 h-8 md:w-10 md:h-10" /> {/* Responsive icon size */}
@@ -36,7 +35,7 @@ export default function Hero() {
       ))}
 
       {/* Main Content */}
-      <div className="container mx-auto mt-6 md:mt-4 px-4 md:px-14 py-12 md:py-20">
+      <div className="container mx-auto px-4 md:px-14 py-40 md:py-24">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           {/* Left Side: Text Content */}
           <motion.div
@@ -45,7 +44,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="flex-1 px-4 md:px-12 relative text-center md:text-left"
           >
-            <motion.h1 
+            <motion.h1
               className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -55,12 +54,12 @@ export default function Hero() {
               <motion.span
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2, type: "spring" }}
+                transition={{ delay: 0.2, type: 'spring' }}
               >
                 Hanan Mumtaz
               </motion.span>
             </motion.h1>
-            
+
             <motion.p
               className="text-lg md:text-xl text-gray-300 mb-8 md:mb-12 max-w-2xl leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
@@ -68,45 +67,33 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
             >
               A passionate full-stack developer crafting{' '}
-              <motion.span
-                className="text-purple-400 font-semibold"
-                animate={{ 
-                  color: ['#a855f7', '#9333ea', '#a855f7'],
-                }}
-                transition={{ duration: 4, repeat: Infinity }}
-              >
+              <span className="text-purple-400 font-semibold animate-pulse">
                 beautiful
-              </motion.span>{' '}
+              </span>{' '}
               and{' '}
-              <motion.span
-                className="text-purple-600 font-semibold"
-                animate={{ 
-                  color: ['#9333ea', '#a855f7', '#9333ea'],
-                }}
-                transition={{ duration: 4, repeat: Infinity }}
-              >
+              <span className="text-purple-600 font-semibold animate-pulse">
                 functional
-              </motion.span>{' '}
+              </span>{' '}
               web experiences
             </motion.p>
 
             {/* Buttons */}
-            <motion.div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-start w-full sm:w-auto"
-            initial={{ opacity: 0, y: 20 }}
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-start w-full sm:w-auto"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              <motion.a 
-                href="#projects" 
-                className="w-full sm:w-auto text-center bg-purple-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base group relative bg-purple-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-full overflow-hidden z-10 pointer-events-auto text-sm md:text-base"
-
-                                whileHover={{ scale: 1.05 }}
+              <motion.a
+                href="#projects"
+                className="w-full sm:w-auto text-center bg-purple-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base group relative overflow-hidden z-10 pointer-events-auto"
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="relative">View My Work</span>
               </motion.a>
-              <motion.a  
-                href="#contact" 
+              <motion.a
+                href="#contact"
                 className="group relative border-2 border-purple-600 text-purple-400 px-6 py-3 md:px-8 md:py-4 rounded-full overflow-hidden z-10 pointer-events-auto text-sm md:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -118,7 +105,7 @@ export default function Hero() {
 
           {/* Right Side: Profile Image (Hidden on small screens) */}
           <motion.div
-            className="hidden md:block flex-1 relative mt-7 md:mt-0" // Hidden on small screens
+            className="hidden md:block flex-1 relative mt-7 md:mt-0"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -126,35 +113,24 @@ export default function Hero() {
             <motion.div
               className="relative w-full aspect-square max-w-xs md:max-w-md mx-auto"
               whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-700 rounded-3xl -rotate-6"
-                animate={{
-                  rotate: ['-7deg', '7deg', '-7deg'],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
+                animate={{ rotate: ['-7deg', '7deg', '-7deg'] }}
+                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
               />
               <motion.div
                 className="absolute inset-0 bg-gradient-to-br from-purple-700 to-purple-500 rounded-3xl rotate-6 opacity-50"
-                animate={{
-                  rotate: ['7deg', '-7deg', '7deg'],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
+                animate={{ rotate: ['7deg', '-7deg', '7deg'] }}
+                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
               />
               <motion.div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={profileImage}
                   alt="Profile"
                   className="w-full h-full object-cover"
+                  loading="lazy" // Lazy load image
                 />
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent"
@@ -171,15 +147,8 @@ export default function Hero() {
       {/* Animated Arrow Down */}
       <motion.div
         className="absolute bottom-100 md:bottom-10 left-1/2 md:left-1/2 transform -translate-x-1/2"
-        animate={{ 
-          y: [0, 10, 0],
-          opacity: [0.5, 1, 0.5]
-        }}
-        transition={{ 
-          repeat: Infinity, 
-          duration: 2,
-          ease: "easeInOut"
-        }}
+        animate={{ y: [0, 10, 0], opacity: [0.5, 1, 0.5] }}
+        transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
       >
         <ArrowDown className="text-purple-500 w-6 h-6 md:w-8 md:h-8" />
       </motion.div>
@@ -212,14 +181,6 @@ export default function Hero() {
             </linearGradient>
           </defs>
           <motion.path
-            initial={{ pathLength: 1 }}
-            animate={{ pathLength: 1 }}
-            transition={{
-              duration: 1,
-              ease: "easeInOut",
-              repeat: 1,
-              repeatDelay: 0,
-            }}
             fill="url(#waveGradient)"
             strokeWidth="6"
             stroke="url(#waveGradient)"

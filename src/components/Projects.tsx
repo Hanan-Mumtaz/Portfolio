@@ -3,78 +3,79 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Github, ExternalLink } from 'lucide-react';
 
 const projects = [
-    {
-      title: "Healthcove",
-      description: "A website built with React.js, ASP.net and MongoDB.",
-      image: "/Portfolio/assets/Healthcove.png",
-      tags: ["React.js", "ASP.net", "MongoDB"],
-      github: "https://github.com/Hanan-Mumtaz/Healthcove",
-      demo: "https://demo.com",
-      featured: false,
-    },
-    {
-      title: "Teeze Store",
-      description: "An application built with React-native, ASP.net and MongoDB",
-      image: "/Portfolio/assets/teeze.png",
-      tags: ["React-native", "ASP.net", "MongoDB"],
-      github: "https://github.com/Hanan-Mumtaz/teeze",
-      demo: "https://demo.com",
-      featured: true,
-    },
-    {
-      title: "Gym Management System",
-      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
-      image: "/Portfolio/assets/Gym.png",
-      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      github: "https://github.com/Hanan-Mumtaz/Gym_Management_System",
-      demo: "https://demo.com",
-      featured: false,
-    },
-    {
-      title: "Gym Management System",
-      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
-      image: "/Portfolio/assets/Gym.png",
-      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      github: "https://github.com/Hanan-Mumtaz/Gym_Management_System",
-      demo: "https://demo.com",
-      featured: false,
-    },
-    {
-      title: "Gym Management System",
-      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
-      image: "/Portfolio/assets/Gym.png",
-      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      github: "https://github.com/Hanan-Mumtaz/Gym_Management_System",
-      demo: "https://demo.com",
-      featured: false,
-    },
-    {
-      title: "Gym Management System",
-      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
-      image: "/Portfolio/assets/Gym.png",
-      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      github: "https://github.com/Hanan-Mumtaz/Gym_Management_System",
-      demo: "https://demo.com",
-      featured: false,
-    },
-    {
-      title: "Gym Management System",
-      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
-      image: "/Portfolio/assets/Gym.png",
-      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      github: "https://github.com/Hanan-Mumtaz/Gym_Management_System",
-      demo: "https://demo.com",
-      featured: false,
-    },
-    {
-      title: "Gym Management System",
-      description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
-      image: "/Portfolio/assets/Gym.png",
-      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      github: "https://github.com/Hanan-Mumtaz/Gym_Management_System",
-      demo: "https://demo.com",
-      featured: false,
-    }
+  {
+    title: "Healthcove",
+    description: "A website built with React.js, ASP.net and MongoDB.",
+    image: "/Portfolio/assets/Healthcove.png",
+    tags: ["React.js", "ASP.net", "MongoDB"],
+    github: "https://github.com/Hanan-Mumtaz/Healthcove",
+    demo: "https://demo.com",
+    featured: false,
+  },
+  {
+    title: "Teeze Store",
+    description: "An application built with React-native, ASP.net and MongoDB",
+    image: "/Portfolio/assets/teeze.png",
+    tags: ["React-native", "ASP.net", "MongoDB"],
+    github: "https://github.com/Hanan-Mumtaz/teeze",
+    demo: "https://demo.com",
+    featured: true,
+  },
+  {
+    title: "Gym Management System",
+    description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+    image: "/Portfolio/assets/Gym.png",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+    demo: "https://demo.com",
+    featured: false,
+  },
+  {
+    title: "Gym Management System",
+    description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+    image: "/Portfolio/assets/Gym.png",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+    demo: "https://demo.com",
+    featured: false,
+  },
+  {
+    title: "Gym Management System",
+    description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+    image: "/Portfolio/assets/Gym.png",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+    demo: "https://demo.com",
+    featured: false,
+  }
+  ,
+  {
+    title: "Gym Management System",
+    description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+    image: "/Portfolio/assets/Gym.png",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+    demo: "https://demo.com",
+    featured: false,
+  },
+  {
+    title: "Gym Management System",
+    description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+    image: "/Portfolio/assets/Gym.png",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+    demo: "https://demo.com",
+    featured: false,
+  },
+  {
+    title: "Gym Management System",
+    description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
+    image: "/Portfolio/assets/Gym.png",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
+    demo: "https://demo.com",
+    featured: false,
+  }
 ];
 
 export default function Projects() {
@@ -98,9 +99,10 @@ export default function Projects() {
       }
     };
 
+    const debouncedUpdateLayout = debounce(updateLayout, 100);
     updateLayout();
-    window.addEventListener('resize', updateLayout);
-    return () => window.removeEventListener('resize', updateLayout);
+    window.addEventListener('resize', debouncedUpdateLayout);
+    return () => window.removeEventListener('resize', debouncedUpdateLayout);
   }, []);
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -140,7 +142,6 @@ export default function Projects() {
     }
   };
 
-  // Calculate the width and translation based on screen size
   const getItemWidth = () => {
     if (isMobile) {
       return '100%'; // Show full width on mobile
@@ -196,6 +197,7 @@ export default function Projects() {
                         src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy" // Lazy load images
                       />
                       {project.featured && (
                         <div className="absolute top-4 right-4 bg-purple-600 px-3 py-1 rounded-full text-sm font-medium">
@@ -278,4 +280,17 @@ export default function Projects() {
       </div>
     </div>
   );
+}
+
+// Debounce function to limit the rate at which a function can fire.
+function debounce(func: Function, wait: number) {
+  let timeout: ReturnType<typeof setTimeout>;
+  return function executedFunction(...args: any[]) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
 }
