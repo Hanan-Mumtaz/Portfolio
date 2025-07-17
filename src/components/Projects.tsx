@@ -9,7 +9,7 @@ const projects = [
     image: "/Portfolio/assets/Healthcove.png",
     tags: ["React.js", "ASP.net", "MongoDB"],
     github: "https://github.com/Hanan-Mumtaz/Healthcove",
-    demo: "https://demo.com",
+    demo: "http://healthcove.duckdns.org",
     featured: false,
   },
   {
