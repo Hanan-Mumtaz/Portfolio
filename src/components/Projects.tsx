@@ -138,8 +138,8 @@ export default function Projects() {
   }, [handleResize]);
 
   return (
-    <div className="min-h-screen bg-black text-white py-20">
-      <div className="container mx-auto px-4">
+    <div id="projects" className="min-h-screen bg-black text-white py-16">
+      <div  className="container mx-auto px-4">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -157,7 +157,7 @@ export default function Projects() {
           }}
           navigation={!isMobile}
           pagination={{ clickable: true, dynamicBullets: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
           mousewheel={{ forceToAxis: true }}
           keyboard={{ enabled: true, onlyInViewport: true }}
           modules={[Navigation, Pagination, Autoplay, Mousewheel, Keyboard]}
