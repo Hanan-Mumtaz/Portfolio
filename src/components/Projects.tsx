@@ -17,7 +17,7 @@ const projects = [
     image: "/Portfolio/assets/teeze.png",
     tags: ["React-native", "ASP.net", "MongoDB"],
     github: "https://github.com/Hanan-Mumtaz/teeze",
-    demo: "https://demo.com",
+    demo: "https://expo.dev/accounts/hanan_mumtaz/projects/teezestore/builds/2168163f-0ffd-41c1-a036-4b89107fb83a",
     featured: true,
   },
   {
