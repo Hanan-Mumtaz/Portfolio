@@ -10,15 +10,7 @@ import 'swiper/css/pagination';
 
 // Example project list
 const projects = [
-  {
-    title: "Healthcove",
-    description: "A website built with React.js, ASP.net and MongoDB.",
-    image: "/Portfolio/assets/Healthcove.png",
-    tags: ["React.js", "ASP.net", "MongoDB"],
-    github: "https://github.com/Hanan-Mumtaz/Healthcove",
-    demo: "http://healthcove.duckdns.org",
-    featured: false,
-  },
+  
   {
     title: "Teeze Store",
     description: "An application built with React-native, ASP.net and MongoDB",
@@ -29,6 +21,14 @@ const projects = [
     featured: true,
   },
   {
+    title: "Healthcove",
+    description: "A website built with React.js, ASP.net and MongoDB.",
+    image: "/Portfolio/assets/Healthcove.png",
+    tags: ["React.js", "ASP.net", "MongoDB"],
+    github: "https://github.com/Hanan-Mumtaz/Healthcove",
+    demo: "http://healthcove.duckdns.org",
+    featured: false,
+  },{
     title: "Gym Management System",
     description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
     image: "/Portfolio/assets/Gym.png",
