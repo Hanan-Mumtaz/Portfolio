@@ -26,7 +26,6 @@ export default function About() {
         </motion.h2>
 
         <div className="grid md:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
-          {/* Profile Image */}
           <motion.div {...fadeInUp} className="md:col-span-4 relative">
             <div className="relative overflow-hidden rounded-2xl aspect-[4/5] max-w-[300px] mx-auto shadow-lg">
               <img
@@ -45,7 +44,6 @@ export default function About() {
             </motion.div>
           </motion.div>
 
-          {/* Description and Cards */}
           <motion.div {...fadeInUp} className="md:col-span-8 space-y-8">
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-purple-400">Full-Stack Developer & Tech Enthusiast</h3>

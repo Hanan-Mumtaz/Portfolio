@@ -1,5 +1,3 @@
-// ✅ REPLACE your Hero.jsx with this
-
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Code, Sparkles, Zap } from 'lucide-react';
@@ -37,10 +35,9 @@ export default function Hero() {
         </motion.div>
       ))}
 
-      {/* Main Content */}
+
       <div className="container mx-auto px-4 md:px-14 py-36 md:py-24">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-          {/* Text Section */}
           <motion.div
             className="flex-1 px-4 md:px-12 text-center md:text-left"
             initial={{ opacity: 0, y: 20 }}
@@ -72,7 +69,6 @@ export default function Hero() {
               web experiences.
             </motion.p>
 
-            {/* Buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start"
               initial={{ opacity: 0, y: 10 }}
@@ -94,7 +90,6 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Profile Image */}
           <motion.div
             className="hidden md:block flex-1"
             initial={{ opacity: 0, x: 100 }}
@@ -106,7 +101,6 @@ export default function Hero() {
               whileHover={{ scale: 1.02 }}
               transition={defaultSpring}
             >
-              {/* Background glows */}
               <motion.div
                 className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-700 rounded-3xl -rotate-6"
                 animate={{ rotate: ['-7deg', '7deg', '-7deg'] }}
@@ -117,7 +111,6 @@ export default function Hero() {
                 animate={{ rotate: ['7deg', '-7deg', '7deg'] }}
                 transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
               />
-              {/* Profile Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={profileImage}
@@ -132,7 +125,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Down Arrow */}
       <motion.div
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0], opacity: [0.5, 1, 0.5] }}
@@ -141,7 +133,6 @@ export default function Hero() {
         <ArrowDown className="text-purple-500 w-6 h-6 md:w-8 md:h-8" />
       </motion.div>
 
-      {/* Header-only Smog (Wave effect) */}
       <div className="absolute top-0 left-0 right-0 w-full h-20 md:h-28 overflow-hidden">
         <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="w-full h-full">
           <defs>

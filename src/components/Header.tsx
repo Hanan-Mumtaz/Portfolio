@@ -13,13 +13,11 @@ export default function Header() {
 
   return (
  <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md text-white shadow-lg w-full overflow-hidden">
-  {/* Subtle Smog inside header only */}
   <div
     className="absolute inset-0 h-full w-full bg-gradient-to-r from-white/20 via-white/10 to-transparent blur-xl opacity-30 pointer-events-none z-0 animate-moveSmog"
   />
 
       <div className="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center relative z-10">
-        {/* Logo */}
         <div className="flex items-center gap-1">
           <img src={he} alt="Logo" className="h-8 w-8" />
           <motion.span
@@ -31,8 +29,6 @@ export default function Header() {
             ectoris
           </motion.span>
         </div>
-
-        {/* Menu */}
         <nav className="hidden md:flex gap-6 lg:gap-8">
           {menuItems.map((item, index) => (
             <motion.a
@@ -49,7 +45,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Socials */}
         <div className="flex gap-4">
           {[{
             href: 'https://github.com/Hanan-Mumtaz',

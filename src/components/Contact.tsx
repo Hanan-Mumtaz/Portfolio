@@ -6,7 +6,6 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 bg-black text-white">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Section Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,9 +16,7 @@ export default function Contact() {
           Get In Touch
         </motion.h2>
 
-        {/* Grid Container */}
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -49,7 +46,6 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.form
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}

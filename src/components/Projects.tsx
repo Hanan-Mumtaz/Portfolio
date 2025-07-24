@@ -1,4 +1,3 @@
-// Projects.tsx
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,7 +7,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// Example project list
 const projects = [
   
   {
@@ -31,7 +29,6 @@ const projects = [
   }
 ];
 
-// ✅ Optimized, memoized card (separate to avoid recreation on render)
 const ProjectCard = React.memo(function ProjectCard({ project }) {
   return (
     <div className="bg-gray-900 rounded-xl overflow-hidden h-full border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300 group">
@@ -151,7 +148,6 @@ export default function Projects() {
   );
 }
 
-// ✅ Debounce function (wrapped for stable reference)
 function debounce(func, wait) {
   let timeout;
   return (...args) => {

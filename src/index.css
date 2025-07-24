@@ -3,22 +3,21 @@
 @tailwind utilities;
 html, body {
     overflow-x: hidden;
-    overscroll-behavior: none; /* Prevents scroll bouncing on mobile */
+    overscroll-behavior: none;
   }
-  /* Add this to your main CSS file (e.g., index.css) */
 .swiper-button-next,
 .swiper-button-prev {
   color: white;
-  top: 47.777%; /* vertically center */
+  top: 47.777%; 
   transform: translateY(-50%);
 }
 
 .swiper-button-prev {
-  left: 30px; /* move from left */
+  left: 30px; 
 }
 
 .swiper-button-next {
-  right: 30px; /* move from right */
+  right: 30px; 
 }
 @keyframes moveSmog {
   0% { transform: translateX(0%) translateY(100%); opacity: 0.3; }
