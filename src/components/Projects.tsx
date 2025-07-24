@@ -28,32 +28,6 @@ const projects = [
     github: "https://github.com/Hanan-Mumtaz/Healthcove",
     demo: "http://healthcove.duckdns.org",
     featured: false,
-  },{
-    title: "Gym Management System",
-    description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
-    image: "/Portfolio/assets/Gym.png",
-    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
-    demo: "https://demo.com",
-    featured: false,
-  },
-  {
-    title: "Gym Management System",
-    description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
-    image: "/Portfolio/assets/Gym.png",
-    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
-    demo: "https://demo.com",
-    featured: false,
-  },
-  {
-    title: "Gym Management System",
-    description: "A website built with HTML, CSS, JavaScript, PHP and MySQL.",
-    image: "/Portfolio/assets/Gym.png",
-    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    github: "https://github.com/Hanan-Mumtaz/Gym_Manangement_System",
-    demo: "https://demo.com",
-    featured: false,
   }
 ];
 
