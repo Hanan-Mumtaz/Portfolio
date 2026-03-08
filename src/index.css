@@ -3,7 +3,6 @@
 @tailwind utilities;
 html, body {
     overflow-x: hidden;
-    overscroll-behavior: none;
   }
 .swiper-button-next,
 .swiper-button-prev {
@@ -27,4 +26,24 @@ html, body {
 
 .animate-moveSmog {
   animation: moveSmog 15s linear infinite;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  /* Allow vertical scrolling, block horizontal */
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Remove overscroll-behavior: none; */
+  overflow-x: hidden;
+  /* Help the trackpad realize this is the scrollable area */
+  touch-action: pan-y; 
+  -webkit-overflow-scrolling: touch;
 }

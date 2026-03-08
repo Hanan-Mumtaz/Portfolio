@@ -11,7 +11,7 @@ import ParticleBackground from './components/ParticleBackground';
 function App() {
   return (
     <AnimatePresence>
-      <div className="bg-white">
+      <div className="bg-white min-h-screen overflow-y-auto overflow-x-hidden">
         <ParticleBackground />
         <Header />
         <motion.main
