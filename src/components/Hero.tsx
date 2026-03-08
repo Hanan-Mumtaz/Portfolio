@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Code, Sparkles, Zap } from 'lucide-react';
-import profileImage from '/assets/profile-D6iLI1Rc.jpg';
+import profileImage from '/assets/profile.jpg';
 
 const defaultSpring = {
   type: 'spring',
