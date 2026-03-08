@@ -32,7 +32,8 @@ export default function About() {
                 src="https://res.cloudinary.com/dnkaadogz/image/upload/v1772966191/about_jvyl6t.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-              />
+             fetchPriority="high" 
+            loading="eager"/>
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent" />
             </div>
             <motion.div

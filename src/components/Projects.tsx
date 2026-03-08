@@ -38,8 +38,8 @@ const ProjectCard = React.memo(function ProjectCard({ project }) {
           src={project.image || "/fallback.jpg"}
           alt={project.title || "Project Image"}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          loading="lazy"
-          decoding="async"
+          fetchPriority="high" 
+            loading="eager"
         />
         {project.featured && (
           <div className="absolute top-4 right-4 bg-purple-600 px-3 py-1 rounded-full text-sm font-medium">

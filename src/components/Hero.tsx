@@ -116,7 +116,8 @@ export default function Hero() {
                   src="https://res.cloudinary.com/dnkaadogz/image/upload/v1772966204/profile_wnucej.jpg"
                   alt="Hanan Mumtaz"
                   className="w-full h-full object-cover"
-                  loading="lazy"
+                  fetchPriority="high" 
+            loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent" />
               </div>
