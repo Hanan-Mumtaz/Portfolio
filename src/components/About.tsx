@@ -29,7 +29,7 @@ export default function About() {
           <motion.div {...fadeInUp} className="md:col-span-4 relative">
             <div className="relative overflow-hidden rounded-2xl aspect-[4/5] max-w-[300px] mx-auto shadow-lg">
               <img
-                src={profileImage}
+                src="https://res.cloudinary.com/dnkaadogz/image/upload/v1772966191/about_jvyl6t.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
               />

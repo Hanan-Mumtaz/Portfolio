@@ -12,7 +12,7 @@ const projects = [
   {
     title: "Teeze Store",
     description: "An application built with React-native, ASP.net and MongoDB",
-    image: "/Portfolio/assets/teeze.png",
+    image: "https://res.cloudinary.com/dnkaadogz/image/upload/v1772966155/teeze_puurog.png",
     tags: ["React-native", "ASP.net", "MongoDB"],
     github: "https://github.com/Hanan-Mumtaz/teeze",
     demo: "https://expo.dev/accounts/hanan_mumtaz/projects/teezestore/builds/2168163f-0ffd-41c1-a036-4b89107fb83a",
@@ -21,12 +21,13 @@ const projects = [
   {
     title: "Healthcove",
     description: "A website built with React.js, ASP.net and MongoDB.",
-    image: "/Portfolio/assets/Healthcove.png",
+    image: "https://res.cloudinary.com/dnkaadogz/image/upload/v1772966158/Healthcove_oki7bn.png",
     tags: ["React.js", "ASP.net", "MongoDB"],
     github: "https://github.com/Hanan-Mumtaz/Healthcove",
     demo: "http://healthcove.duckdns.org",
     featured: false,
-  }
+  },
+  
 ];
 
 const ProjectCard = React.memo(function ProjectCard({ project }) {

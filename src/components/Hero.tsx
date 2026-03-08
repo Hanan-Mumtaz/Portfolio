@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Code, Sparkles, Zap } from 'lucide-react';
-import profileImage from '/assets/profile.jpg';
+import profileImage from 'https://res.cloudinary.com/dnkaadogz/image/upload/v1772966204/profile_wnucej.jpg';
 
 const defaultSpring = {
   type: 'spring',
@@ -113,7 +113,7 @@ export default function Hero() {
               />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src={profileImage}
+                  src="https://res.cloudinary.com/dnkaadogz/image/upload/v1772966204/profile_wnucej.jpg"
                   alt="Hanan Mumtaz"
                   className="w-full h-full object-cover"
                   loading="lazy"
