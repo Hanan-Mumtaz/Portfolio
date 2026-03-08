@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Code, Smartphone, Server, Database, Award, GraduationCap } from "lucide-react";
-import profileImage from "../../public/assets/profile.jpg";
+import profileImage from "../../public/assets/about.jpg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
