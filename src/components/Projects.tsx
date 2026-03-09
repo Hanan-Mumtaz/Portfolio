@@ -27,6 +27,15 @@ const projects = [
     demo: "http://healthcove.duckdns.org",
     featured: false,
   },
+  {
+    title: "Matrix",
+    description: "An application built with React-native, ASP.net and MongoDB.",
+    image: "https://res.cloudinary.com/dnkaadogz/image/upload/v1772966158/Healthcove_oki7bn.png",
+    tags: ["React-native","Expo-go", "ASP.net", "MongoDB"],
+    github: "https://github.com/Hanan-Mumtaz/Matrix",
+    demo: "https://expo.dev/accounts/hanan_mumtaz/projects/teezestore/builds/2168163f-0ffd-41c1-a036-4b89107fb83a",
+    featured: false,
+  }
   
 ];
 
