@@ -13,7 +13,7 @@ const projects = [
     title: "Teeze Store",
     description: "An application built with React-native, ASP.net and MongoDB",
     image: "https://res.cloudinary.com/dnkaadogz/image/upload/v1772966155/teeze_puurog.png",
-    tags: ["React-native", "ASP.net", "MongoDB"],
+    tags: ["React-native","Expo-go", "ASP.net", "MongoDB"],
     github: "https://github.com/Hanan-Mumtaz/teeze",
     demo: "https://expo.dev/accounts/hanan_mumtaz/projects/teezestore/builds/2168163f-0ffd-41c1-a036-4b89107fb83a",
     featured: true,
