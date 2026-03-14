@@ -31,12 +31,7 @@ html, body {
 @tailwind components;
 @tailwind utilities;
 
-html {
-  /* Allow vertical scrolling, block horizontal */
-  overflow-x: hidden;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-}
+
 
 body {
   margin: 0;
